@@ -107,4 +107,32 @@ const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle'
 //10. ***I don't understand what I'm supposed to see here
 //console.log(favMovies);
 
-console.log(favMovies[18]);
+//console.log(favMovies[18]);
+
+//*****Why were we able to change the array with the declared variable being a const??
+
+//Where is Waldo -- Please help me with multi-demensional arrays
+//
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                    ["Lucinda", "Jacc", "Neff", "Snoop"],
+                    ["Petunia", ["Baked Goods", "Waldo"]]];
+
+//Excited Kitten
+//
+//I can't figure this one out....
+// for (let i = 0; i <= 19; i++) {
+//   console.log('Love me, pet me! HSSSSSSS!');
+// }
+// const kittyTalk = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "...why does the red dot always get away..." ]
+//
+// let meow = 0;
+// kittyTalk[meow];
+// kittyTalk.Math.random(meow);
+
+//Find the Median
+// ***not sure about this one
+//Rounds a number downward to it's nearest integer
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+
+const median = Math.floor(nums.length / 2);
+console.log(median);
