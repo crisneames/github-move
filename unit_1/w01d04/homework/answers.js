@@ -134,5 +134,45 @@ const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
 //Rounds a number downward to it's nearest integer
 const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
 
-const median = Math.floor(nums.length / 2);
-console.log(median);
+// const median = Math.floor(nums.length / 2);
+// console.log(median);
+
+//Return of the Closets
+
+const kristynsCloset = [
+  "left shoe",
+  "cowboy boots",
+  "right sock",
+  "GA hoodie",
+  "green pants",
+  "yellow knit hat",
+  "marshmallow peeps"
+];
+
+// Thom's closet is more complicated. Check out this nested data structure!!
+const thomsCloset = [
+  [
+    // These are Thom's shirts
+    "grey button-up",
+    "dark grey button-up",
+    "light blue button-up",
+    "blue button-up",
+  ],[
+    // These are Thom's pants
+    "grey jeans",
+    "jeans",
+    "PJs"
+  ],[
+    // Thom's accessories
+    "wool mittens",
+    "wool scarf",
+    "raybans"
+  ]
+];
+
+//Alien Attire
+ kristynsShoe = kristynsCloset.shift();
+ console.log(kristynsShoe);
+
+thomsCloset.unshift(kristynsShoe);
+console.log(thomsCloset);
