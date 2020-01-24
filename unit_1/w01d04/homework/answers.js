@@ -18,6 +18,21 @@
 
 //Get Even
 
-for (let i = 0; i <= 200; i+= 2) {
-  console.log(i)
-}; 
+// for (let i = 0; i <= 200; i+= 2) {
+//   console.log(i)
+// };
+
+//Fizz Buzz
+
+let aNum = 5;
+for (let i = 0 ; i <= 100; i++) {
+if (aNum % 3 === 0)
+    console.log("Fizz")
+} else if {
+  (aNum % 5 === 0)
+  console.log('Buzz')
+} else if {
+  (aNum % 3 || aNum % 5) {
+    console.log('FizzBuzz')
+  }
+};
