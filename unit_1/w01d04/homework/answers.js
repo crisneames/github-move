@@ -171,8 +171,17 @@ const thomsCloset = [
 ];
 
 //Alien Attire
- kristynsShoe = kristynsCloset.shift();
- console.log(kristynsShoe);
+//  kristynsShoe = kristynsCloset.shift();
+//  console.log(kristynsShoe);
+//
+// thomsCloset.unshift(kristynsShoe);
+// console.log(thomsCloset);
 
-thomsCloset.unshift(kristynsShoe);
-console.log(thomsCloset);
+//Dirty Laundry
+//
+// for (let i = 0; i < kristynsCloset.length; i++) {
+//   console.log(' WHIRR:Now washing ' + kristynsCloset[i] )
+// };
+
+//Inventory
+//
