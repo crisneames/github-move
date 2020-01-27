@@ -10,7 +10,11 @@
 //////
 //Palindrome
 //////
-//Doesn't work******************//
+
+//.split('') -- split a string into an array of substrings
+//.reverse() -- reverse the order of elements in an array
+//.join() -- convert the order of an array into strings
+)
 const checkPalindrome = (str) => {
 //Lowercase the string and replace all non-words characters
   let lowerCaseStr = str.toLowerCase();
@@ -24,12 +28,12 @@ const checkPalindrome = (str) => {
  }
 };
 
-console.log(checkPalindrome('cristi'));
+console.log(checkPalindrome('Cristi'));
 
 //////
 //Sum Array
 //
-//*******Don't work*************
+
 const arr = [10, 20, 20, 40];
 let sum = 0;
 const sumArray = () => {
@@ -46,7 +50,7 @@ console.log(sum);
 //Prime Numbers
 //////
 
-//******2nd function does not work***********
+
 const checkPrime = (num) => {
   if (num===1){
     return false;
@@ -68,7 +72,7 @@ console.log(checkPrime(25));
 //////
 //Rock Paper Scissors
 //////
-//*****I didn't know how to do this one. I referenced https://gist.github.com/joshfry/7327656 for the rockPaperScissors function.*************
+//*****I didn't know how to do this one. I referenced https://gist.github.com/joshfry/7327656 for the rockPaperScissors function.************* I now understand more about nested ifs*********
 const randomMove = () => {
   let random = Math.random()
   if (random < .10) {
