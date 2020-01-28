@@ -63,6 +63,7 @@ const calculatePurchase = (tool) => {
    dollars -= 25
    alert(`You have ${dollars} after the purchase of the old-timey push mower`)
  }
+ start();
 }
 
 const mowGrass = () => {
@@ -79,6 +80,7 @@ const mowGrass = () => {
   dollars += 100
   alert(`You made $100 mowing with the rusty scissors for a total of ${dollars} dollars`)
 }
+start();
 }
 
 start()
