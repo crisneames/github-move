@@ -10,36 +10,42 @@ const panagram = ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy'
 
 //Every
 
-// const numberCheck = (nums) => {
-// return nums >= 0;
-// }
-// const everyNum = () => {
-//   nums.every(numberCheck);
-// }
+const numberCheck = (nums) => {
+return nums >= 0;
+}
+const everyNum = () => {
+  nums.every(numberCheck);
+}
 //
 // console.log(numberCheck());
 //
 //
-// const wordCheck = (panagram) => {
-// return panagram < 8;
-//  }
+const wordCheck = (panagram) => {
+return panagram < 8;
+ }
 //
-//  const everyWord = () => {
-//    word.every(wordCheck);
-//  }
+ const everyWord = () => {
+   word.every(wordCheck);
+ }
 // console.log(wordCheck())
 //
-// const numberCheck2 = (num) => num >= 0;
-// console.log(num.every(numberCheck2))
+const numberCheck2 = (num) => num >= 0;
+console.log(num.every(numberCheck2))
 
 //Filter
-// const checkNumber = () => nums < 4
+const checkNumber = () => nums < 4
 // console.log(num.filter(checkNumber))
 
 //Find
-const checkNumber = () => nums % 5 === 0
-console.log(num.find(checkNumber))
+const checkNumber1 = () => nums % 5 === 0
+// console.log(num.find(checkNumber1))
 
 //Find Index
-const checkNumber = () => nums % 5 === 0
-console.log(num.findIndex(checkNumber))
+const checkNumber3 = () => nums % 5 === 0
+console.log(num.findIndex(checkNumber3))
+
+//For each
+
+//Map
+const map1 = num.map(x => x * 100);
+console.log(map1)
