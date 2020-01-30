@@ -45,6 +45,10 @@ const checkNumber3 = () => nums % 5 === 0
 console.log(num.findIndex(checkNumber3))
 
 //For each
+panagram.forEach((item, i) => {
+  
+});
+
 
 //Map
 const map1 = num.map(x => x * 100);
