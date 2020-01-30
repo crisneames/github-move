@@ -1,0 +1,22 @@
+section {
+  display: flex;
+  background: yellow;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+div {
+  padding: 1em;
+  box-sizing: border-box;
+  border: 1 px solid black;
+}
+
+.topnav {
+  background-color: black;
+
+}
+
+a {
+  color: white;
+}
