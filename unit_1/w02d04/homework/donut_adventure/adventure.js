@@ -17,7 +17,7 @@ constructor(name, health = 100){
 }
   catchPhrases = ['I\'m fresher than day old pizza', 'You can\'t count my calories']
   talkSass () {
-    console.log(catchPhrases[Math.floor(Math.random() * catchPhrases.length)]);
+    return this.catchPhrases[Math.floor(Math.random() * this.catchPhrases.length)];
   }
   announceHealth () {
     console.log(this.health)
@@ -42,7 +42,7 @@ class Enemy {
     }
     catchPhrases = ['I\'m Youtube famnous', 'I\'m more dangerous that an uncovered sewer']
     talkSmack () {
-      console.log(catchPhrases[Math.floor(Math.random() * catchPhrases.length)]);
+      return this.catchPhrases[Math.floor(Math.random() * this.catchPhrases.length)];
     }
     announceHealth () {
       console.log(this.health);
@@ -54,3 +54,12 @@ class Enemy {
 
 const pizzaRat = new Enemy('Pizza Rat')
 console.log(pizzaRat)
+
+// Walking down the street
+
+console.log(dougie.talkSass())
+console.log(pizzaRat.talkSmack())
+console.log(dougie.announceHealth());
+console.log(pizzaRat.announceHealth());
+
+// Fight!
