@@ -47,8 +47,9 @@ class Enemy {
     announceHealth () {
       console.log(this.health);
     }
-    fight () {
-      console.log('I\'m gonna flatten you like a slice of pepperoni!');
+    fight (enemy) {
+      console.log(this.health)
+      return this.weapon.cheeseGrease
     }
 }
 
@@ -61,5 +62,9 @@ console.log(dougie.talkSass())
 console.log(pizzaRat.talkSmack())
 console.log(dougie.announceHealth());
 console.log(pizzaRat.announceHealth());
+console.log(dougie.fight(pizzaRat));
 
-// Fight!
+
+
+// Fight
+// I can't figure all of this one out. Would love to see it in class
