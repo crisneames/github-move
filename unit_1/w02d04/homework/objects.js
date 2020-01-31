@@ -81,3 +81,18 @@ console.log(sandy.ageUp())
 console.log(sandy)
 sandy.buyHamster(rosco)
 console.log(sandy)
+
+//////
+// Create a Story with your Person class
+//////
+//I'd like to see this part in class tomorrow if possible. How do you automate eating 5
+//times, for example?
+timmy = new Person('Timmy', 48, 6.0, 185, 4, 200)
+console.log(timmy)
+
+console.log(timmy.ageUp())
+
+console.log(timmy.eat)
+
+
+console.log(timmy)
