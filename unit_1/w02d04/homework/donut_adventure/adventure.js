@@ -1,4 +1,4 @@
-console.log('It works!');
+//console.log('It works!');
 
 //
 // Daring Adventure!
@@ -12,18 +12,31 @@ constructor(name, health = 100){
   this.health = health;
   this.weapons = {
     sprinkleSpray: 5,
-    sugarShock: 10
+    sugarShock: 10,}
+    this.catchPhrases = ['I\'m fresher than day old pizza', 'You can\'t count my calories']
+
   }
+
+
+
+randonInt(array) {
+  return Math.floor(Math.random() * array.length)
 }
-  catchPhrases = ['I\'m fresher than day old pizza', 'You can\'t count my calories']
   talkSass () {
-    return this.catchPhrases[Math.floor(Math.random() * this.catchPhrases.length)];
+    return this.catchPhrases[Math.floor(Math.random() * array.length)];
   }
   announceHealth () {
     console.log(this.health)
   }
   fight () {
     console.log('I\'m ready to rumble');
+    // create an array of the weapon names (keys for this.weapon)
+    const weaponOptions = Object.keys(this.weapon);
+
+    //select a random weapon from that array
+const selectWeapon = weaponOptions[this.randomInt(weaponOptions)];
+    //log the selecfed weapon and it's hit points
+    console.log(this.weapon[selectWeapon] + ' hitpoints')
   }
 }
 
@@ -39,8 +52,9 @@ class Enemy {
       pepperoniStars: 5,
       cheeseGrease: 10
     }
-    }
-    catchPhrases = ['I\'m Youtube famnous', 'I\'m more dangerous that an uncovered sewer']
+
+    this.catchPhrases = ['I\'m Youtube famnous', 'I\'m more dangerous that an uncovered sewer']
+  }
     talkSmack () {
       return this.catchPhrases[Math.floor(Math.random() * this.catchPhrases.length)];
     }

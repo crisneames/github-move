@@ -66,24 +66,24 @@ console.log(crayonSelector().crayons[2]);
 //Model a Vending Machine
 //////
 
-// const vendingMachine = {
-//       snacks: [ {
-//                 name: 'candy',
-//                 price: 2
-//               },
-//               {name: 'cookies',
-//               price: 3
-//             },
-//               {name: 'chips',
-//                price: 2
-//              }
-//             ]
-//       vend = () => {
-//         console.log(vendingMachine.snacks[2])
-//       }
-//   }
-//
-// console.log(vendingMachine.vend)
+const vendingMachine = {
+      snacks: [ {
+                name: 'candy',
+                price: 2
+              },
+              {name: 'cookies',
+              price: 3
+            },
+              {name: 'chips',
+               price: 2
+             }
+           ],
+      vend (input)    {
+        console.log(vendingMachine.snacks[input])
+      }
+  }
+
+console.log(vendingMachine.vend(1))
 ////////////can't figure this one out
 
 //////
