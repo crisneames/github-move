@@ -50,9 +50,39 @@ $li4.appendTo('ul');
 const $li5 = $("<li>").text("leash").addClass('owl');
 $li5.appendTo('ul');
 const $li6 = $("<li>").text("Bertie Bott's Every Flavor [Jelly] Beans");
-$li5.appendTo('ul');
+$li6.appendTo('ul');
 
-
-
+//Year 4
+//
+const $h5 = $("<h5>").text("Spring 2017");
+$h5.appendTo("body");
+const $table = $("<table>");
+$table.appendTo("body");
+const $thead = $("<thead>");
+$thead.appendTo("table");
+const $tr4 = $("<tr>");
+$tr4.appendTo("thead");
+ const $th = $("<th>").text("Day");
+ $th.appendTo("<thead>");
+ const $th2 = $("<th>").text("Classes");
+ $th.appendTo("<thead>");
+const $tr = $("<tr>");
+$tr.appendTo("table");
+const $td1 = $("<td>").text("Monday");
+$td1.appendTo("tr");
+const $td2 = $("<td>").text("Herbology");
+$td2.appendTo("tr");
+const $tr2 = $("<tr>")
+$tr2.appendTo("table")
+const $td3 = $("<td>").text("Tuesday");
+$td3.appendTo("tr");
+const $td4 = $("<td>").text("Potions")
+$td4.appendTo("tr");
+const $tr3 = $("<tr>");
+$tr3.appendTo("table");
+const $td5 = $("<td>").text("Wednesday");
+$td5.appendTo("tr");
+const $td6 = $("<td>").text("History of Magic")
+$td6.appendTo("tr");
 
 });
