@@ -97,12 +97,21 @@ $td3.appendTo($tr2);
 //
  $wand.remove();
  $li1.remove();
-const $wand2 = $("<h4>").text("New Wand");
-$wand2.AppendTo($pet);
+//I get an error here
+// const $wand2 = $("<h4>").text("New Wand")
+// $wand2.AppendTo($pet);
 
-$wand2.css('color', 'indigo');
+//$wand2.css('color', 'indigo');
 
 // Year 6
 //
+$(".secret").hide("slow").delay("2000");
+
+$(".secret").show("slow");
+
+// Year 7
+//
+$h5.text("Spring 2018");
+
 
 });
