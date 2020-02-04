@@ -56,33 +56,53 @@ $li6.appendTo('ul');
 //
 const $h5 = $("<h5>").text("Spring 2017");
 $h5.appendTo("body");
+
 const $table = $("<table>");
 $table.appendTo("body");
-const $thead = $("<thead>");
-$thead.appendTo("table");
-const $tr4 = $("<tr>");
-$tr4.appendTo("thead");
- const $th = $("<th>").text("Day");
- $th.appendTo("<thead>");
- const $th2 = $("<th>").text("Classes");
- $th.appendTo("<thead>");
-const $tr = $("<tr>");
+
+// const $thead = $("<thead>");
+// $thead.appendTo("table");
+
+// const $tr4 = $("<tr>");
+// $tr4.appendTo("thead");
+
+ // const $th = $("<th>").text("Day");
+ // $th.appendTo("<thead>");
+ //
+ // const $th2 = $("<th>").text("Classes");
+ // $th.appendTo("<thead>");
+
+const $tr = $("<tr>").text("Monday");
 $tr.appendTo("table");
-const $td1 = $("<td>").text("Monday");
+
+const $td1 = $("<td>").text("Herbology");
 $td1.appendTo("tr");
-const $td2 = $("<td>").text("Herbology");
-$td2.appendTo("tr");
-const $tr2 = $("<tr>")
+// const $td2 = $("<td>").text("Herbology");
+// $td2.appendTo("tr");
+
+const $tr2 = $("<tr>").text("Tuesday")
 $tr2.appendTo("table")
-const $td3 = $("<td>").text("Tuesday");
-$td3.appendTo("tr");
-const $td4 = $("<td>").text("Potions")
-$td4.appendTo("tr");
-const $tr3 = $("<tr>");
-$tr3.appendTo("table");
-const $td5 = $("<td>").text("Wednesday");
-$td5.appendTo("tr");
-const $td6 = $("<td>").text("History of Magic")
-$td6.appendTo("tr");
+const $td3 = $("<td>").text("Potions");
+$td3.appendTo($tr2);
+// const $td4 = $("<td>").text("Potions")
+// $td4.appendTo("tr");
+// const $tr3 = $("<tr>");
+// $tr3.appendTo("table");
+// const $td5 = $("<td>").text("Wednesday");
+// $td5.appendTo("tr");
+// const $td6 = $("<td>").text("History of Magic")
+// $td6.appendTo("tr");
+
+// Year 5
+//
+ $wand.remove();
+ $li1.remove();
+const $wand2 = $("<h4>").text("New Wand");
+$wand2.AppendTo($pet);
+
+$wand2.css('color', 'indigo');
+
+// Year 6
+//
 
 });

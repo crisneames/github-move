@@ -13,3 +13,7 @@ body {
 ul {
   list-style: none;
 }
+
+table {
+  border: 1px solid gray;
+}
