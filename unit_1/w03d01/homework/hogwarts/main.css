@@ -6,3 +6,10 @@ body {
   .owl {
     font-family: fantasy;
   }
+
+.secret {
+  opacity: .5;
+}
+ul {
+  list-style: none;
+}

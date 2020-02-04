@@ -34,6 +34,24 @@ $($pet).appendTo("body");
 $($wand).appendTo('body');
 //console.log($name, $pet, $wand, $house);
 
+// Year 3
+//
+const $list = $("<ul>").attr("storage", "trunk");
+$list.appendTo('div');
+
+const $li1 = $("<li>").text('butter beer');
+$li1.appendTo('ul');
+const $li2 = $("<li>").text('invisibility').addClass('secret');
+$li2.appendTo('ul');
+const $li3 = $("<li>").text("magic map").addClass('secret');
+$li3.appendTo('ul');
+const $li4 = $("<li>").text("time turner").addClass('secret');
+$li4.appendTo('ul');
+const $li5 = $("<li>").text("leash").addClass('owl');
+$li5.appendTo('ul');
+const $li6 = $("<li>").text("Bertie Bott's Every Flavor [Jelly] Beans");
+$li5.appendTo('ul');
+
 
 
 
