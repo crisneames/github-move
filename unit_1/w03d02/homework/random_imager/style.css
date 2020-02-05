@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightblue;
+}
+
+.square {
+  background-color: lightyellow;
+  cursor: pointer;
+  height: 100px;
+  width: 100px;
+}

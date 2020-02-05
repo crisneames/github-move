@@ -1,0 +1,20 @@
+body {
+  height: vh;
+  width: vw;
+  background-color: lightblue;
+}
+
+.triangle {
+    display: flex;
+    width: 0;
+    height: 0;
+    border-left: 2vh solid transparent;
+    border-right: 2vh solid transparent;
+    border-bottom: 4vh solid cadetblue;
+}
+
+.row  {
+  /* border: 1px solid gold; */
+  display: flex;
+  justify-content: center;
+}
