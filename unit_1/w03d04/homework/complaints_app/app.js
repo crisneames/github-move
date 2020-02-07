@@ -3,6 +3,8 @@
 // $('form').on('submit', (event)=>{
 //         event.preventDefault();
 //         const userInput = $('input[type="text"]').val();
+$(
+  ()=>{
         $.ajax({
             url:'https://data.cityofnewyork.us/resource/erm2-nwe9.json?agency=NYPD',
             data: {
@@ -10,12 +12,23 @@
             }
         }).then(
             (data)=>{
-                $('#borough').html(data.borough);
-                $('#discriptor').html(data.discriptor);
-                $('#agency').html(data.agency);
-                $('#resolution').html(data.resolution_description);
+              const list = $(`<div class="list-container"></div>`)
+              $('body').append(list)
 
-                //console.log(data)
+              for(let i = 0 ; i < data.length; i++){
+                const $row = $(`<div id="${i}" class="row"></div>"`)
+                const $uniqueKey = $(`<div id="${data[i]['unique_key']}-key">${data[i]['unique_key']}</div>`);
+                const $borough = $(`<div id="${data[i]['unique_key']}-borough">${data[i].borough}</div>`);
+                  const $descriptor = $(`<div id="${data[i]['unique_key']}-descriptor">${data[i].descriptor}</div>`);
+                $('body').append($row)
+                $row.append($uniqueKey)
+                $row.append($borough)
+                $row.append($descriptor)
+               }
+                // $('#borough').html(data.borough);
+                // $('#discriptor').html(data.descriptor);
+                // $('#agency').html(data.agency);
+                // $('#resolution').html(data.resolution_description);
             },
             ()=>{
                 console.log('bad');
@@ -112,9 +125,9 @@
           $($statenIslandBtn).on ("click", () => {
             console.log("Staten Island clicked")
           })
+})
 
 
 
-        
 //addButtons()
 //getComplaint()
