@@ -2,7 +2,7 @@
 //   console.log('oops! I still have to link my jQuery properly!');
 // } else {console.log('I did it! I linked jQuery and this js file!')};
 // console.log('Homework');
-
+let $body = 'body';
 $(() => {
 	//Year 1
   //
@@ -54,50 +54,26 @@ $li6.appendTo('ul');
 
 //Year 4
 //
-const $h5 = $("<h5>").text("Spring 2017");
-$h5.appendTo("body");
-
-const $table = $("<table>");
-$table.appendTo("body");
-
-// const $thead = $("<thead>");
-// $thead.appendTo("table");
-
-// const $tr4 = $("<tr>");
-// $tr4.appendTo("thead");
-
- // const $th = $("<th>").text("Day");
- // $th.appendTo("<thead>");
- //
- // const $th2 = $("<th>").text("Classes");
- // $th.appendTo("<thead>");
-
-const $tr = $("<tr>").text("Monday");
-$tr.appendTo("table");
-
-const $td1 = $("<td>").text("Herbology");
-$td1.appendTo("tr");
-// const $td2 = $("<td>").text("Herbology");
-// $td2.appendTo("tr");
-
-const $tr2 = $("<tr>").text("Tuesday")
-$tr2.appendTo("table")
-const $td3 = $("<td>").text("Potions");
-$td3.appendTo($tr2);
-// const $td4 = $("<td>").text("Potions")
-// $td4.appendTo("tr");
-// const $tr3 = $("<tr>");
-// $tr3.appendTo("table");
-// const $td5 = $("<td>").text("Wednesday");
-// $td5.appendTo("tr");
-// const $td6 = $("<td>").text("History of Magic")
-// $td6.appendTo("tr");
-
+const $h5 = $('<h5>').text('Spring 2017');
+  const $table = $('<table>')
+  const $thead = $('<thead>')
+  $('<th>').text('Day').appendTo($thead)
+  $('<th>').text('Classes').appendTo($thead)
+  $table.append($thead);
+  $table.append($('<tr>').append($('<td>').text('Monday')).append($('<td>').text('Herbology')));
+  $table.append($('<tr>').append($('<td>').text('Tuesday')).append($('<td>').text('Divination')));
+  $table.append($('<tr>').append($('<td>').text('Wednesday')).append($('<td>').text('History of Magic')));
+  $table.append($('<tr>').append($('<td>').text('Thursday')).append($('<td>').text('Charms')));
+  $table.append($('<tr>').append($('<td>').text('Friday')).append($('<td>').text('Potions')));
+  
+  $('body').append($h5).append($table);
 // Year 5
 //
  $wand.remove();
+ // or $('h4'),eq(1).remove()
  $li1.remove();
-//I get an error here
+ // or S('li').eq(0).remove()
+
 // const $wand2 = $("<h4>").text("New Wand")
 // $wand2.AppendTo($pet);
 

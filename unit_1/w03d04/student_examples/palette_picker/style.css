@@ -1,5 +1,5 @@
 div {
-   1px solid lightsalmon;
+   border: 1px solid lightsalmon;
 }
 
 #container {
