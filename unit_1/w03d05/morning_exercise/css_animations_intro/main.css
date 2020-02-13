@@ -7,7 +7,7 @@ body {
 .container {
   width: 90%;
   margin:auto;
-  border: 1px solid gold;
+  /* border: 1px solid gold; */
   margin-top: 2.5em;
 }
 .demo {
@@ -20,15 +20,26 @@ body {
 *************************/
 .transform {
   background-color: thistle;
+  /* transform:translate(100px, 100px); */
+  /* transform: rotate(45deg); */
+  /* transform: rotate(45deg) scale(2); */
+  /* transform: scale(.2); */
+  /* transform: skew(20deg); */
+  /* transform: skew(10deg) rotate( 45deg) translate(50px , 50px) scale(.5); */
+
 }
 /*************************
 * Transition
 *************************/
 .transition {
   background: red;
+  transition-duration: 4s;
+  transform: translate(0);
+  transition-timing-function: linear;
 }
 .transition:hover {
   background:  blue;
+  transform: translate(300px);
 }
 /*************************
 * Animation
@@ -36,6 +47,9 @@ body {
 .animation {
   background: black;
   position: relative;
+  animation-name: rainbow-move;
+  animation-duration: 6s;
+  animation-iteration-count: 2s;
 }
 /*simple start*/
 @keyframes black-to-white {
