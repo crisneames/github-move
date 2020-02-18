@@ -1,8 +1,13 @@
 // DEPENDENCIES
+<<<<<<< HEAD
 const express = require('express');
 const app = express();
 // PORT
 const port = 3000;
+=======
+const express = require('express')
+const app = express()
+>>>>>>> 6ab118461649108ae569db0415c204484cab3d84
 
 // run `npm i` to install dependencies in package.json
 
@@ -19,9 +24,59 @@ const port = 3000;
 // views folder has not been created - create it!
 // views/missions folder has not been created create it!
 
+<<<<<<< HEAD
 // data
 const missions = require('./models/marsMissions.js')
 console.log(missions);
+=======
+// PORT
+const PORT = 3000
+
+// DATA - put into marsMissions.js file inside of a models folder, for module.exports
+// remember to require it in the server
+const marsMissions = [
+  {
+    name: 'Curiosity',
+    launchDate: '26 Nov 2011',
+    operator: 'NASA',
+    missionType: 'Rover',
+    img:
+      'https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia19808-main_tight_crop-monday.jpg'
+  },
+  {
+    name: 'Opportunity',
+    launchDate: '8 Jul 2003',
+    operator: 'NASA',
+    missionType: 'Rover',
+    img: 'https://www.jpl.nasa.gov/images/mer/20091207/mer20091207-browse.jpg'
+  },
+  {
+    name: 'Spirit',
+    launchDate: '10 Jun 2003',
+    operator: 'NASA',
+    missionType: 'Rover',
+    img:
+      'https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/images/287330main_image_1215_full.jpg'
+  },
+  {
+    name: 'Sojourner',
+    launchDate: '4 Dec 1996',
+    operator: 'NASA',
+    missionType: 'Rover',
+    img:
+      'https://img.purch.com/w/640/aHR0cDovL3d3dy5zcGFjZS5jb20vaW1hZ2VzL2kvMDAwLzAwOS84NjAvaTAyL21hcnMtcGF0aGZpbmRlci1zb2pvdXJuZXIuanBnPzEzMDYzNTk5Nzg='
+  },
+  {
+    name: 'Rosetta',
+    launchDate: '2 Mar 2004',
+    operator: 'ESA',
+    missionType: 'Gravity Assist',
+    img:
+      'https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA18891_hires.jpg'
+  }
+]
+
+>>>>>>> 6ab118461649108ae569db0415c204484cab3d84
 // INDEX Route
 // send data to 'missions/index.ejs' view
 // the view should display just the names of each mission
@@ -45,9 +100,7 @@ app.get('/marsMissions/:indexOfMissionsArray', (req, res) => {
 // the view should have a link back to the index
 // Stretch: display the image inside an image tag
 
-
-
 // LISTENER
-app.listen(port, ()=> {
-  console.log('Missions to Mars running on port: ', port);
+app.listen(PORT, () => {
+  console.log('Missions to Mars running on port: ', PORT)
 })
