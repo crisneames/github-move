@@ -8,9 +8,13 @@ app.listen(PORT, () => {
 
 });
 
-// Route
+// Routes
 app.get('/calc/:num1/:num2', (req, res) => {
   console.log(req.params);
   sum = Number(req.params.num1) + Number(req.params.num2)
   res.send("the sum is " + sum);
+})
+
+app.get('/calquery/:num1/:num2', (req, res) => {
+
 })
