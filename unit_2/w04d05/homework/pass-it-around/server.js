@@ -16,8 +16,12 @@ app.get('/', (req, res) => {
 app.get('/:beerNumber', (req, res) => {
   console.log(req.params);
   beer = req.params.beerNumber
-  if (beer != 0) {
-  res.send(`<a href="/${beer - 1}">Take one down and pass it around</a> : ${beer}`); 
+  if (beer === 0) {
+    res.send("We're out of beer." `<a href="/">Time to restock!`)
+
+  else {
+  res.send(`<a href="/${beer - 1}">Take one down and pass it around</a> : ${beer}`);
+}
 }
 
 
