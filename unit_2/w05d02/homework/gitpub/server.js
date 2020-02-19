@@ -18,6 +18,13 @@ res.render('index.ejs', {
   allDrinks: drinks
 });
 })
+
+//show
+app.get('/drinks/:id', (req, res) => {
+  res.render('show.ejs', {
+  drink: drinks[req.params.id]
+  })
+})
 //listener
 app.listen(PORT, () => {
   console.log('listening on port', PORT)
