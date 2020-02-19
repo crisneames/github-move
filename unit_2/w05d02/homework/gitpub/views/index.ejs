@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <style type="text/css">
       body {
-        background: lightblue;
+        background: lightgrey;
         color: black;
       }
 
@@ -16,14 +16,25 @@
   </head>
   <body>
     <h1>Welcome to Gitpub</h1>
-    <ul>
+        <ul>
       <% for (let i = 0; i <allDrinks.length; i++) { %>
+
         <li>
           <a href="/drinks/<%=i%>">
           <%= allDrinks[i].name %>
           </a>
-          </li>
+        </li>
+    </ul>
+        <% } %>
+
+        <ul>
+          <% for (let i = 0; i <allFood.length; i++) { %>
+        <li>
+          <%=allFood[i].name %>
+        </li>
         <% } %>
     </ul>
+
+
   </body>
 </html>

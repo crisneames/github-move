@@ -7,6 +7,7 @@ const PORT = 3000
 
 // data access
 const drinks = require('./models/drinks.js')
+const food = require('./models/food.js')
 
 // Routes
 app.get('/', (req, res) => {
@@ -15,7 +16,8 @@ app.get('/', (req, res) => {
 
 app.get('/drinks', (req, res) => {
 res.render('index.ejs', {
-  allDrinks: drinks
+  allDrinks: drinks,
+  allFood: food
 });
 })
 
