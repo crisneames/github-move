@@ -14,7 +14,9 @@ app.get('/', (req, res) => {
   })
 
 app.get('/drinks', (req, res) => {
-res.send(drinks);
+res.render('index.ejs', {
+  allDrinks: drinks
+});
 })
 //listener
 app.listen(PORT, () => {
