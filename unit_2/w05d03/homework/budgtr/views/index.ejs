@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Budgtr</h1>
+      <table>
+          <tr>
+          <% budgets.forEach((budget, index) => { %>
+          <td><%=budget.date%></td>
+          <td><a href="/budget/<%=index%>"> <%=
+          budget.name%></a></td>
+          <td><%=budget.amount%></td>
+        </tr> <% }) %>
+      </table>
+      <button><a href="/budget/new">New Budget Item</a></button>
+    </div>
+    <script src="/js/app.js" charset="utf-8"></script>
+  </body>
+</html>

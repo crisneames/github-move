@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <title>Budgtr</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1><%=budget.name%></h1>
+
+    <p>date: <%= budget.date%></p>
+    <p>name: <%= budget.name%></p>
+    <p>from: <%= budget.from%></p>
+    <p>amount: <%= budget.amount%></p>
+    <p>tags: <%= budget.tags%></p>
+
+    <button><a href="/budget">Back to Index</a></button>
+    </div>
+    <script src="js/app.js" charset="utf-8"></script>
+  </body>
+</html>
