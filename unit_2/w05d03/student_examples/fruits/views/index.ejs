@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
     <title>Index of Fruits</title>
   </head>
   <body>
@@ -11,5 +12,9 @@
       <li><a href="/fruits/<%=index%>"> <%= fruit.name %></a> </li>
     <% }) %>
     </ul>
-  </body>
+    <nav>
+  <a href="/fruits/new">Create a New Fruit</a>
+    </nav>
+    <script src="/js/app.js" charset="utf-8"></script>
+</body>
 </html>

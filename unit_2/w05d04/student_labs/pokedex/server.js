@@ -55,13 +55,13 @@ app.get('/pokemon/:index/edit', (req, res)=>{
  	pokemon[req.params.index] = req.body //in our pokemon array, find the index that is specified in the url (:index).  Set that element to the value of req.body (the input data)
  	res.redirect('/pokemon'); //redirect to the index page
  })
-app.listen(PORT, () => {
-  console.log('listening on port', PORT)
-})
 
 // Create
 app.post('/pokemon', (req, res) => {
 
   pokemon.push(req.body)
   res.redirect('/pokemon')
+})
+app.listen(PORT, () => {
+  console.log('listening on port', PORT)
 })

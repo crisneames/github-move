@@ -1,0 +1,63 @@
+body {
+  color: grey;
+  font-family: 'Oswald';
+}
+h2 {
+  text-align: center;
+}
+label {
+    font-family: 'Oswald';
+    font-weight: 200;
+    color: grey;
+    display: block;
+}
+
+input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid lightblue;
+}
+
+table {
+  padding: 0px 20px;
+  margin: 20px;
+}
+
+input:focus {
+    border: 1px solid blue;
+}
+
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    background: lightblue;
+    font-family: 'Oswald';
+    color: grey;
+
+
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background: lightblue;
+    box-shadow: purple;
+}
+
+img {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+a:link {
+  color: grey;
+}
+
+a: hover {
+  color: lightblue;
+}

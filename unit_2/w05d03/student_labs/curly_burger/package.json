@@ -1,5 +1,5 @@
 {
-  "name": "ejs_fruits",
+  "name": "curly_burger",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -11,8 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "method-override": "^3.0.0"
+    "express": "^4.17.1"
   }
 }

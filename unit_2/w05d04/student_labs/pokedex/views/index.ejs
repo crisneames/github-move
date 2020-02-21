@@ -6,9 +6,9 @@
     <title>Pokedex</title>
   </head>
   <body>
-    <h2>Pokedex - Click on a Pokemon for details</h2>
+    <h2>Pokedex</h2>
     <nav>
-      <a href="/pokemon/new">Create a Pokemon</a>
+    <button type="button" name="button"><a href="/pokemon/new">Create a Pokemon</a></button>
     </nav>
     <div class="container">
       <table>
@@ -23,6 +23,8 @@
               <td>
                 <a href="/pokemon/<%=i%>"><img src="<%=pokemon[i].img%>" width="200px"/></a>
               </td>
+              <td><a href="/pokemon/<%=i%>/edit">Edit </a></td>
+
           </tr>
               <%  } %>
     </div>
