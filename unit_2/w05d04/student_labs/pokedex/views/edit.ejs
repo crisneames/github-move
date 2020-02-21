@@ -6,6 +6,7 @@
     <title>Pokedex</title>
   </head>
   <body>
+    <h2>Edit <%=pokemon.name%>'s Stats</h2>
     <form action="/pokemon/<%=index%>?_method=PUT" method="post">
         <label for="hp">hp</label>
         <input type="text" name="hp" id="hp" value="<%=pokemon.stats.hp%>"/>
@@ -13,7 +14,8 @@
         <input type="text" name="attack" id="attack" value="<%=pokemon.stats.attack%>" />
         <label for="defense">defense</label>
         <input type="text" name="defense" id="defense"
-        <input type="submit" value="Edit <%pokemon.name%>">
+        value="<%=pokemon.stats.attack%>" />
+        <input type="submit" value="Edit">
       </form>
   </body>
 </html>
