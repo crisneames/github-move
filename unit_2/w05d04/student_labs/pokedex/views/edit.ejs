@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <form action="/pokemon/<%=index%>?_method=PUT" method="post">
+        <label for="hp">hp</label>
+        <input type="text" name="hp" id="hp" value="<%=pokemon.stats.hp%>"/>
+        <label for="attack">attack</label>
+        <input type="text" name="attack" id="attack" value="<%=pokemon.stats.attack%>" />
+        <label for="defense">defense</label>
+        <input type="text" name="defense" id="defense"
+        <input type="submit" value="Edit <%pokemon.name%>">
+      </form>
+  </body>
+</html>

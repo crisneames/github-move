@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <h2><a href="/pokemon">Back to Index</a></h2>
+        <h3>ID: <%= pokemon.id %> </h3>
+        <h3>NAME: <%= pokemon.name%></h3>
+        <img src="<%=pokemon.img%>" width="200px" alt="<%= pokemon.name%>">
+        <h3>TYPE: <%=pokemon.type%></h3>
+        <table>
+            <tr id="details">
+              <td> hp: <%= pokemon.stats.hp%> </td>
+              <td>attack: <%= pokemon.stats.attack%></td>
+              <td>defense: <%= pokemon.stats.defense%></td>
+              <td>spattack: <%= pokemon.stats.spattack%></td>
+              <td>spdefense: <%= pokemon.stats.spdefense%></td>
+              <td>speed: <%= pokemon.stats.speed%></td>
+            </tr>
+        </table>
+
+  </body>
+</html>

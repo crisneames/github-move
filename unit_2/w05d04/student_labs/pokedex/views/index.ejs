@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <h2>Pokedex - Click on a Pokemon for details</h2>
+    <nav>
+      <a href="/pokemon/new">Create a Pokemon</a>
+    </nav>
+    <div class="container">
+      <table>
+          <tr>
+            <%for (let i = 0; i < pokemon.length; i++) { %>
+              <td><form action="/pokemon/<%=i%>?_method=DELETE" method="post">
+                <input type="submit" value="DELETE"/>
+              </form></td>
+              <td>
+                <a href="/pokemon/<%=i%>"><%=pokemon[i].name%></a>
+              </td>
+              <td>
+                <a href="/pokemon/<%=i%>"><img src="<%=pokemon[i].img%>" width="200px"/></a>
+              </td>
+          </tr>
+              <%  } %>
+    </div>
+
+  </body>
+</html>
