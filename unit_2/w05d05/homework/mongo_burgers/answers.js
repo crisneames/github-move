@@ -1,30 +1,66 @@
 // create 5 burgers (at least 3 should be beef)
-
+db.burger.insert(
+  {
+    meat: 'beef',
+    cheese: true,
+    toppings: ['mustard' ,'onions' ,'pickles']
+  }
+  )
+  db.burger.insert(
+  {
+    meat: 'beef',
+    cheese: false,
+    toppings: ['mayo' ,'lettuce' ,'pickles']
+  }
+  )
+  db.burger.insert(
+  {
+    meat: 'beef',
+    cheese: true,
+    toppings: ['ketchup' ,'mustard' ,'onions']
+  }
+  )
+  db.burger.insert(
+  {
+    meat: 'elk',
+    cheese: true,
+    toppings: ['mayo' ,'mustard' ,'pickles']
+  }
+  )
+  db.burger.insert(
+  {
+    meat: 'turkey',
+    cheese: true,
+    toppings: ['mayo' ,'tomato' ,'pickles']
+  }
+  )
 
 
 // find all the burgers
+db.burger.find().pretty()
 
 
 // show just the meat of each burger
+db.burger.find ({}, { meat : 1, _id : 0} )
 
 
 // show just the toppings of each burger
-
+db.burger.find ({}, { toppings : 1, _id : 0} )
 
 // show everything but the cheese
-
+db.burger.find ({}, { meat : 1, toppings : 1, _id : 0} )
 
 // find all the burgers with beef
-
+db.burger.find ({ meat : 'beef' }).pretty()
 
 // find all the burgers that are not beef
-
+db.burger.find({"meat": {$ne: "beef"}}).pretty()
 
 // find the first burger with cheese
-
+db.burger.findOne({ cheese : true })
 
 // find one and update the first burger with cheese to have a property of 'double cheese'
-
+db.burger.findOne
 
 // find the burger you updated to have double cheese
 
@@ -42,6 +78,8 @@
 
 // drop the database
 //Expected Output
+use burgers
+db.dropDatabase()
 // {
 //   "dropped": "burgers",
 //   "ok": 1
@@ -67,4 +105,4 @@
 // add a topping of 'eggs' to all the beef burgers
 //note since this db is 'reset' there should be no veggie burgers, all beef burgers should still be intact
 
-//Add a price to each burger, start with $5.00 for each burger 
+//Add a price to each burger, start with $5.00 for each burger
