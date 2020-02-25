@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title><%=products.name.toUpperCase(); %></title>
+    </head>
+    <body>
+        <h1><%=products.name; %> Page</h1>
+        <%=products.name; %>
+        <%=products.description; %>
+        <%=products.price; %>
+        <%=products.qty; %>
+        <% if(products.qty === 0){ %>
+            OUT OF STOCK
+        <% } %>
+        <nav>
+            <a href="/product">Back to Products</a>
+            <button type="button" name="button">"Buy "<%=products.name; %> </button>
+        </nav>
+    </body>
+</html>
