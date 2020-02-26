@@ -5,17 +5,21 @@
         <title><%=products.name.toUpperCase(); %></title>
     </head>
     <body>
-        <h1><%=products.name; %> Page</h1>
-        <%=products.name; %>
-        <%=products.description; %>
-        <%=products.price; %>
-        <%=products.qty; %>
+        <h1><%=products.name; %> page</h1>
+        <p>Name: <%=products.name; %></p>
+      <p>Description:  <%=products.description; %></p>
+      <p>Price:  <%=products.price; %> </p>
+      <p>Quantity:  <%=products.qty; %> </p>
         <% if(products.qty === 0){ %>
             OUT OF STOCK
         <% } %>
         <nav>
             <a href="/product">Back to Products</a>
             <button type="button" name="button">"Buy "<%=products.name; %> </button>
+            <form action="/product/<%=products.id; %>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE"/>
+            </form>
+            <a href="/product/<%=products.id; %>/edit">Edit</a>
         </nav>
     </body>
 </html>

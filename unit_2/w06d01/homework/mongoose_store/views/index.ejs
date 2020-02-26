@@ -7,28 +7,20 @@
   <body>
 
       <header>
-        <a href="/views/new">Add a New Product</a>
+        <a href="/product/new">Add a New Product</a>
         <h3>Products</h3>
       </header>
       <div class="container">
       <div class="product">
         <% for (let i = 0; i < products.length; i++) { %>
-          <p> <%= products[i].name %> </p>
+          <p> Name: <a href="/product/<%= products[i].id %>"><%= products[i].name %> </a> </p>
+          <p> Description: <%= products[i].description %> </p>
           <p> Price: <%= products[i].price %> </p>
           <p> Qty: <%= products[i].qty %> </p>
-        <%  if qty = 0 { %>
-            <p>Out of Stock</p>
-        <%  } %>
-      <%  } %>
-
+          <hr />
+<%  } %>
       </div>
 
-      <div class="product">
-
       </div>
-      <div class="Product">
-
-      </div>
-    </div>
   </body>
 </html>

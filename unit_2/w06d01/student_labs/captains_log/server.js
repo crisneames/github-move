@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express();
 const mongoose = require('mongoose');
-//const Log = require('./models/log.js');
+const Log = require('./models/logs.js');
 const PORT = 3000;
 /* End Variables */
 /*
@@ -13,12 +13,23 @@ const PORT = 3000;
 app.use(express.urlencoded({extended: true}));
 /* Middleware End*/
 /* Database Connection */
-mongoose.connect('mongodb://localhost:27017/basiccrud', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost:27017/captainLogs', { useNewUrlParser: true })
 mongoose.connection.once('open', () => {
   console.log('connected to mogodb database.')
 })
 
-
+// Index
+        app.get('/logs', (req, res) => {
+          Log.find({}, (error, allLogs) => {
+            if (error){
+              res.send('OOPs you have an error')
+            }
+            console.log(allLogs)
+            res.render('index.ejs', {
+              logs: allLogs
+            })// end the res.render
+          })// this is the fruits call back
+        })
 // New  is connected Create [ Create has the functionality]
         app.get('/logs/new', (req, res) => {
             res.render('new.ejs')
@@ -32,18 +43,17 @@ mongoose.connection.once('open', () => {
                 // ******CREATE *****
 
     // Create is connected to New [New shows the form that allows you to call this Create Functionality]
-app.post('/logs/', (req, res)=>
-res.send(req.body)
-{
-    if(req.body.readyToEat === 'on'){ //if checked, req.body.readyToEat is set to 'on'
-       req.body.readyToEat = true;
-          } else { //if not checked, req.body.readyToEat is undefined
-                req.body.readyToEat = false;
+app.post('/logs/', (req, res)=> {
+
+    if (req.body.shipIsBroken === 'on')  {
+                req.body.shipIsBroken = true;
+     } else {
+                req.body.shipIsBroken = false;
               }
-            //Fruit.create(req.body, (error, createdFruit) => {
-            //  res.redirect('/fruits');
-          //  })
-          });
+            Log.create(req.body, (error, createdLog) => {
+              res.redirect('/logs/show');
+            })
+})
                 /* End Create Route */
         /*****************************
   Tell Node and Express where to listen for requests
