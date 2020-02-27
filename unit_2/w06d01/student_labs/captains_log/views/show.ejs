@@ -1,0 +1,15 @@
+<body>
+        <h1><%=logs.title; %> show page</h1>
+          <p>Title: <%=logs.title; %></p>
+          <p>Entry: <%=logs.entry; %></p>
+          <% if(logs.shipIsBroken === true){ %>
+            Ship is broken
+        <% } else { %>
+            Shi is okay
+        <% } %>
+          <p>shipIsBroken: <%=logs.shipIsBroken; %></p>
+
+        <nav>
+            <a href="/logs">Back to Index</a>
+        </nav>
+    </body>

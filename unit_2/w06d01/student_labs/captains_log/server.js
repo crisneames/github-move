@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express();
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 const Log = require('./models/logs.js');
 const PORT = 3000;
 /* End Variables */
@@ -30,11 +31,26 @@ mongoose.connection.once('open', () => {
             })// end the res.render
           })// this is the fruits call back
         })
+
 // New  is connected Create [ Create has the functionality]
         app.get('/logs/new', (req, res) => {
             res.render('new.ejs')
         })
 
+        // SHOW
+        app.get('/logs/:id', (req, res) => {
+          //if (req.session.currentUser) {
+            Log.findById(req.params.id, (error, foundLog) => {
+              console.log(error);
+              res.render('show.ejs', {
+                logs: foundLog
+              //  currentUser: req.session.currentUser
+              })
+            })
+          //} else {
+        //    res.redirect('/sessions/new')
+        //  }
+        })
 
 
         /*********************************
@@ -51,7 +67,8 @@ app.post('/logs/', (req, res)=> {
                 req.body.shipIsBroken = false;
               }
             Log.create(req.body, (error, createdLog) => {
-              res.redirect('/logs/show');
+              console.log(error);
+              res.redirect('/logs');
             })
 })
                 /* End Create Route */
