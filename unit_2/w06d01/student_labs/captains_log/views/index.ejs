@@ -12,14 +12,14 @@
       <table>
         <tr>
           <%for (let i = 0; i < logs.length; i++) { %>
-            <td><form action="/logs[i]/<%=logs._id%>?_method=DELETE" method="post">
+            <td><form action="/logs/<%=logs[i].id%>?_method=DELETE" method="post">
               <input type="submit" value="DELETE"/>
             </form></td>
             <td>
               <a href="/logs/<%=logs[i].id%>"><%=logs[i].title%></a>
             </td>
 
-            <td><a href="/logs[i]/<%=logs._id%>/edit">Edit </a></td>
+            <td><a href="/logs/<%=logs[i].id%>/edit/">Edit </a></td>
         </tr>
             <%  } %>
   </body>

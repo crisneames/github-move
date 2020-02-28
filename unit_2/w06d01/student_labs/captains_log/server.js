@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express();
 const mongoose = require('mongoose');
+const methodOverride = require('method-override');
 const bcrypt = require('bcrypt');
 const Log = require('./models/logs.js');
 const PORT = 3000;
@@ -12,6 +13,7 @@ const PORT = 3000;
 ***********************
 */
 app.use(express.urlencoded({extended: true}));
+app.use(methodOverride('_method'));
 /* Middleware End*/
 /* Database Connection */
 mongoose.connect('mongodb://localhost:27017/captainLogs', { useNewUrlParser: true })
@@ -52,6 +54,14 @@ mongoose.connection.once('open', () => {
         //  }
         })
 
+        // Edit
+              app.get('/logs/:id/edit', (req, res)=>{
+                Log.findById(req.params.id, (err, foundLog)=>{ //find the fruit
+                  res.render('edit.ejs', {
+                  logs: foundLog //pass in found fruit
+              });
+          });
+      });
 
         /*********************************
              FUNCTIONAL ROUTES
@@ -71,6 +81,27 @@ app.post('/logs/', (req, res)=> {
               res.redirect('/logs');
             })
 })
+
+// Update
+    app.put('/logs/:id/', (req, res) => {
+      if (req.body.shipIsBroken === 'on'){
+          req.body.shipIsBroken = true;
+          } else {
+          req.body.shipIsBroken = false;
+          }
+          Log.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedLog)=>{
+          res.redirect(`/logs/${updatedLog.id}`);
+      });
+    })
+    // Delete
+    app.delete('/logs/:id', (req, res) => {
+      Log.findByIdAndRemove(req.params.id, (err, deletedLog) => {
+        res.redirect('/logs')
+      })
+    })
+/*********************************
+ FUNCTIONAL ROUTES End
+*********************************/
                 /* End Create Route */
         /*****************************
   Tell Node and Express where to listen for requests
