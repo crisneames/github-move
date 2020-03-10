@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+   max-width: 100px;
+ }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import items from './data.js';
-
+import './index.css'
 // console.log(items)
 
 class App extends Component {
@@ -83,7 +83,7 @@ Quantity: {this.state.quantity} <br></br>
 
 <ul>
 {this.state.items.map(items =>
-    <li>{items.item} {items.quantity} {items.units}</li>
+    <li>{items.quantity} - {items.item} {items.units}</li>
 
 )
 }
