@@ -9,3 +9,7 @@ li {
 img {
    max-width: 100px;
  }
+
+ form {
+  margin-bottom: 10px;
+}

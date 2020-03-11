@@ -13,48 +13,70 @@ class App extends Component {
       user: '',
       approved: false,
     }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
+
+  handleChange(e){
+    this.setState({ [e.target.name]: e.target.value})
+  }
+
+  handleSubmit(e){
+    e.preventDefault()
+    const newItem = {
+      birdName: this.state.birdName,
+      image: this.state.image,
+      user: this.state.user
+
+    }
+    this.setState({
+      birds: [newItem, ...this.state.birds],
+      birdName: '',
+      image: '',
+      user: ''
+
+    })
+  }
+
   render () {
     return (
       <div>
-        <form>
-          <label htmlFor="birdName">
-            <input type="text"
-                    id="birdName"
-                    value={this.state.birdName}
+        <h1>Birds</h1>
+        <form onSubmit={this.handleSubmit}>
+          <input type="text"
+                  placeholder="Enter Bird Name"
+                  name="birdName"
+                  value={this.state.birdName}
+                  onChange={this.handleChange}/>
 
-                    />
-          </label>
-          <label htmlFor="image">
             <input type="text"
-                    id="image"
+                    placeholder="Add Image"
+                    name="image"
                     value={this.state.image}
-
-                    />
-          </label>
-          <label htmlFor="user">
-            <input type="text"
-                    id="user"
-                    value={this.state.user}
-
-                    />
-          </label>
-          <label htmlFor="approved">
-            <input type="boolean"
-                    id="approved"
-                    value={this.state.approved}
                     onChange={this.handleChange}
                     />
-          </label>
+
+            <input type="text"
+                    placeholder="Enter User"
+                    name="user"
+                    value={this.state.user}
+                    onChange={this.handleChange}
+                    />
+            <input type="submit"/>
+
+
         </form>
 
 
-          {this.state.birds.map(bird => (
-          <li>
+          {this.state.birds.map((bird, i) => (
+          <li className="birds" key={i}>
               <img src={bird.image} />
               <br />
-             <p>{bird.birdName}</p>
-            </li>
+              <p>Bird: {bird.birdName}</p>
+              User: {bird.user}
+              <hr />
+          </li>
+
 
           ))}
 
