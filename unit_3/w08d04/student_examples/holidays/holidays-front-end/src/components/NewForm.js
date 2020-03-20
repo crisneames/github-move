@@ -15,7 +15,7 @@ async handleSubmit (event) {
     event.preventDefault()
     try{
       let response =   await fetch(this.props.baseURL + '/holidays', {
-          method: 'POST',
+          method: 'POST', //PUT, DELETE would go here
           body: JSON.stringify({name: this.state.name}),
           headers: {
               'Content-Type': 'application/json'

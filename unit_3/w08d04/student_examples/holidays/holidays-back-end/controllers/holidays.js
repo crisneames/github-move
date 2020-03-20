@@ -1,7 +1,7 @@
 const holidays = require('express').Router()
 const Holiday = require('../models/holidays.js')
 
-// Index route
+// Index route  - show holidays
 holidays.get('/', (req, res) => {
   Holiday.find({}, (err, foundHolidays) => {
     if (err) {
