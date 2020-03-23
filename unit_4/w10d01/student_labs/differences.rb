@@ -5,11 +5,11 @@
 # #   let name = prompt("what is your name?");
 # #   return name;
 # # };
-#
+########################################
 # # puts "What is your name? "
 # # name = gets
 # # puts "Hello #{name} "
-#
+#########################################
 # # Reverse It
 # # Write a method that reverses a string. Here's the javascript:
 #
@@ -25,12 +25,13 @@
 # #
 # #   alert(reverse);
 # # };
+##################################################################
 # def reverse_it
 # puts "a man, a plan, a canal, frenemies!".reverse
 # end
 #
 # reverse_it
-#
+###################################################################
 # # Swap Em
 # # Write a method that swaps the values of two variables around. Here's the javascript:
 # #
@@ -45,13 +46,14 @@
 # #
 # #   alert("a is now " + a + ", and b is now " + b);
 # # };
-#
+###############################################################
 # a = 1
 # b = 2
 #
 # a, b = b, a
 # puts a, b
-#
+#################################################################
+
 # # Multiply Array
 # # Write a method that multiplies all numbers in a given array and returns the final product. Here's the javascript:
 # #
@@ -67,7 +69,39 @@
 # #
 # #   return total;
 # # };
+####################################
+Array A = [1,2,3,4,5]
+puts [1, 2, 3, 4, 5].inject(:*)
+####################################
+
+# Fizz Buzzer
+# Write a method that takes a number argument and returns "fizz" if the number is divisible by three, "buzz" if the number is divisible by five, and "fizzbuzz" if it's divisible by both. Here's the javascript:
 #
+# const fizzbuzzer = (x) => {
+#   if( x%(3*5) == 0 ) {
+#     return 'fizzbuzz'
+#   } else if( x%3 == 0 ) {
+#     return 'fizz'
+#   } else if ( x%5 == 0 ) {
+#     return 'buzz'
+#   } else {
+#     return 'archer'
+#   }
+# }
+########################################
+
+def fizzbizz
+  if x%(3*5) = 0
+    return 'fizzbuzz'
+  elsif x%3 = 0
+    return 'fizz'
+  elsif x%5 = 0
+    return 'buzz'
+  else
+    return archer
+end
+
+
 # # Ruby foreach
 # ['one', 'two', 'three'].each do |str|
 # 	puts 'the value is ' + str
@@ -154,16 +188,17 @@
 
 
 # downcase/ downcase! / swapcase / swapcase!
-puts "NAME".downcase
-p "cristi".downcase!
+# puts "NAME".downcase
+# p "cristi".downcase!
 
 # Calling the downcase method on a string will return the lowercase version of the string, but the original variable won't change
 #
 # Calling the same methods followed by an exclamation mark will both return lowercase version of the string and will also change the content of the variable.
 #
-# The .swapcase method transforms the uppercase latters in a string to lowercase and the lowercase letters to uppercase.
+# The .swapcase method transforms the uppercase letters in a string to lowercase and the lowercase letters to uppercase.
 
-puts "hELLO wORLD".swapcase    #=> Hello World
+# puts "hELLO wORLD".swapcase    #=> Hello World
 
 # swapcase!  - Modify str by swapping case of all characters
 #   "Hello World".swapcase!
+###################################################################
