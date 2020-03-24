@@ -114,3 +114,27 @@ puts colors.reverse()
 # 3. Print out all of the colors in the array with all capital letters.
 
 puts colors.map(&:upcase)
+
+############################
+# Methods
+############################
+# Write a method named find_area that finds the area of a rectangle when given values for width and height
+#
+# REMEMBER: In Ruby, the keyword return is implied and can be omitted!
+def find_area (height, width)
+  puts height * width
+end
+
+find_area(10, 10)
+
+# Write a method named multiply_each_by_five that will loop over the given nums array below and print each number multiplied by 5
+
+nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
+
+def multiply_each_by_five arr
+arr.each { |item|
+  puts item * 5
+}
+end
+
+multiply_each_by_five(nums)
