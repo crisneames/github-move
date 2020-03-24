@@ -138,3 +138,70 @@ arr.each { |item|
 end
 
 multiply_each_by_five(nums)
+
+#########################
+# Methods With a Hash
+#########################
+# Use the following given hashes to solve the problems below
+
+# Hashes
+
+book = {
+  title: 'The Great Gatsby',
+  author: 'F Scott Fitzgerald',
+  year: 1925,
+  price: 10
+}
+
+lamp = {
+  type: 'reading',
+  brand: 'Ikea',
+  price: 25
+}
+
+table = {
+  type: 'bed side',
+  brand: 'Crate & Barrel',
+  color: 'birch',
+  price: 50
+}
+# 1. Write a method named print_price that will take in any hash and return the price of the item.
+
+# def print_price (hsh)
+# puts hsh.price
+# end
+#
+# print_price(table)
+# 2. Write a method named print_item_sums that will take in two hashes and will return the sum of the prices for the items in the hashes.
+# def print_item_sums(hsh1, hsh2)
+#   puts hsh1.price * hsh2.price
+# end
+# print_item_sums(book, table)
+
+################################
+# Solving Problems with Ruby
+################################
+# Euler Problem 1
+# If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+#
+# Find the sum of all the multiples of 3 or 5 below 1000.
+
+# def sum_multiples_3_and_5(num)
+#   if num % 3 == 0 || num % 5 == 0
+
+#########
+# Primes
+########
+# Write a method called check_prime? that will test whether a number is Prime. The method will return true if Prime, false if not.
+
+def check_prime(num)
+
+end
+
+# Write another method called get_primes that will print all the Primes up to an arbitrary limit. For example, if you invoke your method with get_primes 100, it will print all the Prime numbers up to and including 100.
+#
+# This method can call on the previous check_prime? method.
+
+def get_primes
+
+end
