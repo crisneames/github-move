@@ -1,4 +1,6 @@
+##############
 # Hello World
+##############
 # 1. Print "Hello World" to the console.
 
 puts "Hello World"
@@ -13,8 +15,10 @@ puts "Hello #{adjective} World"
 phrase = "Hello World".upcase
 puts phrase
 
+#############################
 # Nums Array and Enumerables
 # With the following array:
+#############################
 
  nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0, 35, 19, 66, 3, 22, 21, 4, 4, 4, 0, 1, 2, 3, 4, 12, 15]
 
@@ -91,3 +95,22 @@ puts nums.reject { |i|  i % 3 == 0 }
 # 16. use .select to return all the numbers divisible by 5
 
 puts nums.select { |num|  num % 5 == 0 }
+
+#################
+# Color Array
+#################
+# With the following array:
+
+colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+
+# 1. Print out a random color.
+
+puts colors.sample(1 + rand(colors.count))
+
+# 2. Print out the colors array in reverse order.
+
+puts colors.reverse()
+
+# 3. Print out all of the colors in the array with all capital letters.
+
+puts colors.map(&:upcase)
