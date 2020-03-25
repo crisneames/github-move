@@ -168,13 +168,13 @@ table = {
 # 1. Write a method named print_price that will take in any hash and return the price of the item.
 
 # def print_price (hsh)
-# puts hsh.price
+# puts hsh[:price]
 # end
 #
 # print_price(table)
 # 2. Write a method named print_item_sums that will take in two hashes and will return the sum of the prices for the items in the hashes.
 # def print_item_sums(hsh1, hsh2)
-#   puts hsh1.price * hsh2.price
+#   puts hsh1[:price] + hsh2[:price]
 # end
 # print_item_sums(book, table)
 
@@ -189,6 +189,16 @@ table = {
 # def sum_multiples_3_and_5(num)
 #   if num % 3 == 0 || num % 5 == 0
 
+def euler_problem(num)
+  sum = 0
+  # p (1..num).map { | n | n % 3 == 0 || n % 5 == 0 }
+  (1..num - 1).map { |n|
+    if n % 3 == 0 || n % 5 == 0
+      sum += n
+    end
+  }
+  return sum
+end
 #########
 # Primes
 ########
