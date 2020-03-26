@@ -10,11 +10,8 @@ SELECT head_coach FROM teams WHERE division = 'South' and conference = 'AFC';
 -- 4. The total number of players in the NFL
 SELECT count(name) FROM players;
 
-
 -- 5. The team names and head coaches of the NFC North and AFC East
-SELECT name, head_coach, division, conference where division = 'North' and conference = 'NFC'
-SELECT name, head_coach, division, conference where division = 'East' and conference = 'AFC'
-
+SELECT name, head_coach, division, conference WHERE (division = 'North' AND conference = 'NFC') OR (division = 'East' AND conference = 'AFC')
 
 -- 6. The 50 players with the highest salaries
 SELECT name, salary FROM players ORDER BY salary DESC LIMIT 50;
@@ -41,4 +38,4 @@ SELECT a.name, b.name FROM teams a, players b WHERE a.name = 'Buffalo Bills' and
 SELECT sum(salary) FROM teams a, players b WHERE a.name = 'New York Giants' and a.id = b.team_id;
 
 -- 14. The player with the lowest salary on the Green Bay Packers
-SELECT b.name, b.salary FROM teams a, players b WHERE a.name = 'Green Bay Packers' and a.id = b.team_id ORDER BY b.salary LIMIT 1; 
+SELECT b.name, b.salary FROM teams a, players b WHERE a.name = 'Green Bay Packers' and a.id = b.team_id ORDER BY b.salary LIMIT 1;
