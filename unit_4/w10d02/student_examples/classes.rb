@@ -92,22 +92,43 @@ end
 ##########################
 # Beginning Hangman
 #########################
+class Word
+	def initialize word
+		letters = word.split('')
+     @word = word
+		@letters_display = letters.map do |l|
+			{ letter: l, hidden: true }
+		end
+	end
+  def word
+   @word
+end
+	def render
+		@letters_display.each do |l|
+			if l[:hidden]
+				print " _ "
+			else
+				print l.letter
+			end
+		end
+	end
+end
 dictionary = ["potato", "honey", "tea", "rice", "quinoa"]
-
 word = dictionary.sample
-
-puts "Guess which word I secretly chose!"
-puts "The word has #{word.length} letters."
-
-puts word
-
-input = gets.chomp
-
-if input == word
-	puts "Yep. You got it. The word was #{word}."
-else
-	puts "WRONG"
-	puts "(t)ry again or (q)uit?"
-	again = gets.chomp.downcase
-	if again == "q" then puts "ok" end
+puts "Hangman! Guess this word"
+puts " The length of the word is #{word.length
+}"
+current_word = Word.new word
+loop do
+	current_word.render
+	input = gets.chomp
+	if input == current_word.word
+		puts "Yep. You got it. The word was #{current_word.word}."
+		break
+	else
+		puts "WRONG"
+		puts "(t)ry again or (q)uit?"
+		again = gets.chomp.downcase
+		break if again == "q"
+	end
 end

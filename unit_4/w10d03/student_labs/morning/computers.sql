@@ -1,5 +1,6 @@
--- Open up psql and create a sql_lab database if you haven't already done so. 
+-- Open up psql and create a sql_lab database if you haven't already done so.
 -- If you already have a sql_lab database, no need to create it again.
+-- CREATE DATABASE sql_lab;
 
 -- Write SQL commands under the prompts below, and run the file to get results.
 
@@ -19,7 +20,7 @@
 -- Select all entries from the computers table
 
 
--- HUNGRY FOR MORE? 
+-- HUNGRY FOR MORE?
 -- Look at this afternoon's instructor notes and read on altering tables before attempting below
 
 -- Alter the computers_models, removing the storage_amount column
