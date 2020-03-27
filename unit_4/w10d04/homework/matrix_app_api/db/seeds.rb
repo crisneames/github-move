@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Character.create([
 
-	{ name: "Neo", description: false },
-	{ name: "Trinity", description: false },
-	{ name: "Morpheus", description: false },
-	{ name: "Agent Smith", description: false },
+	{ name: "Neo", description: "known as The One, an anagram for Neo) is the protagonist of the Matrix franchise. " },
+	{ name: "Trinity", description: "a fictional character in the Matrix franchise" },
+	{ name: "Morpheus", description: "is a fictional character in The Matrix franchise" },
+	{ name: "Agent Smith", description: "a fictional character and the main antagonist of The Matrix trilogy" },
 
 ])
