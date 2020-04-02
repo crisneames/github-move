@@ -1,26 +1,37 @@
-import React from 'react';
-import BarChart from './components/LineChart';
+import React, { Component } from 'react';
+import LineChart from './components/LineChart.js'
 import './App.css';
+import Config from './components/Config';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-  
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+        ice_creams: []
+    };
+    this.geticeCreams = this.geticeCreams.bind(this)
+  }
+  async geticeCreams(){
+    try{
+      const response = await fetch(`${Config.baseURL}/ice_creams`);
+      const iceCreams = await response.json()
+      this.setState({ iceCreams:[...iceCreams] })
+      console.log(this.state.iceCreams)
+    } catch (err){
+        console.error(err)
+    }
+  }
+  componentDidMount(){
+    this.geticeCreams();
+  }
+  render() {
+    return (
+      <div className="App">
+        <LineChart id={1}/>
+      </div>
+    );
+  }
 }
+
 
 export default App;
